@@ -1,0 +1,10 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.user h1 {
+  font-size: 1.2rem;
+  text-align: center;
+}

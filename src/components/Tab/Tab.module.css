@@ -1,0 +1,19 @@
+.tabdetails {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.tabdetails li {
+  border: 1px solid #1a8ed1;
+  padding: 1rem;
+}
+
+.tabactions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}

@@ -1,0 +1,6 @@
+.mainContainer {
+  width: 100%;
+  padding: 4.2rem 10%;
+  display: flex;
+  gap: 12rem;
+}

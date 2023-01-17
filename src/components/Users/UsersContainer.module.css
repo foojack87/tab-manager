@@ -1,0 +1,9 @@
+.usersContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: #d0ebff;
+  border-radius: 9px;
+  box-shadow: 0 0.8rem 1.6rem rgb(0, 0, 0, 12%);
+  padding: 0.5rem 1.5rem;
+}
