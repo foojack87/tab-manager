@@ -1,6 +1,6 @@
 .mainContainer {
   width: 100%;
-  padding: 4.2rem 10%;
+  padding: 4.2rem 15%;
   display: flex;
-  gap: 12rem;
+  gap: 4rem;
 }

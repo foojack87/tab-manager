@@ -1,7 +1,5 @@
 .usersContainer {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  height: 100%;
   background: #d0ebff;
   border-radius: 9px;
   box-shadow: 0 0.8rem 1.6rem rgb(0, 0, 0, 12%);

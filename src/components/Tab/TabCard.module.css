@@ -1,7 +1,9 @@
 .tabcard {
+  display: grid;
+  grid-template-rows: 1fr 0.5fr;
   margin: 1rem auto;
   border-radius: 6px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding: 1rem;
   width: 100%;
 }
