@@ -76,13 +76,20 @@ const TabForm = (props) => {
             </div>
             <div className={classes.details}>
               <label htmlFor="description">What's the payment for</label>
-              <input type="text" id="description" ref={descriptionInputRef} />
+              <textarea
+                id="description"
+                ref={descriptionInputRef}
+                rows="3"
+                cols="24"
+              />
+              {/* <input type="text" id="description" ref={descriptionInputRef} /> */}
               <label htmlFor="how-to-pay">Payment Method</label>
-              <input
-                type="text"
+              <textarea
                 id="how-to-pay"
                 ref={paymethodInputRef}
                 placeholder="Cash or wire transfer? Please leave your bank information if you prefer wire transfer"
+                rows="3"
+                cols="24"
               />
             </div>
           </div>
