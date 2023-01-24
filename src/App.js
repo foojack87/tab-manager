@@ -9,6 +9,7 @@ import UsersContainer from "./components/Users/UsersContainer";
 
 function App() {
   const showTabForm = useSelector((state) => state.tab.isTabFormShown);
+  const tabItems = useSelector((state) => state.tabDetails.tab);
 
   return (
     <Fragment>
@@ -16,7 +17,7 @@ function App() {
       <Layout>
         <MainContainer>
           <UsersContainer />
-          <TabContainer />
+          {tabItems.length > 0 && <TabContainer />}
         </MainContainer>
       </Layout>
     </Fragment>

@@ -1,8 +1,15 @@
 import classes from "./Tab.module.css";
 import TabCard from "./TabCard";
+import { useDispatch } from "react-redux";
+import { tabActions } from "../store/tabDetails";
 
 const Tab = (props) => {
-  const { user, payer, amount, description, date, paymethod } = props;
+  const { id, user, payer, amount, description, date, paymethod } = props;
+  const dispatch = useDispatch();
+
+  const removeTabHandler = () => {
+    dispatch(tabActions.deleteTab(id));
+  };
 
   return (
     <li>
@@ -17,7 +24,7 @@ const Tab = (props) => {
           <li>{paymethod}</li>
         </ul>
         <div className={classes.tabactions}>
-          <button>Paid</button>
+          <button onClick={removeTabHandler}>Paid</button>
           <button>Remind</button>
         </div>
       </TabCard>

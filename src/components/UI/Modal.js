@@ -1,17 +1,17 @@
 import { Fragment } from "react";
 import ReactDOM from "react-dom";
 import classes from "./Modal.module.css";
-import { useDispatch } from "react-redux";
-import { myTabFormActions } from "../store/tab";
+// import { useDispatch } from "react-redux";
+// import { myTabFormActions } from "../store/tab";
 
 const Backdrop = (props) => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  const hideTabFormHandler = (props) => {
-    dispatch(myTabFormActions.hideTabForm());
-  };
+  // const hideTabFormHandler = (props) => {
+  //   dispatch(myTabFormActions.hideTabForm());
+  // };
 
-  return <div className={classes.backdrop} onClick={hideTabFormHandler} />;
+  return <div className={classes.backdrop} />;
 };
 
 const ModalOverlay = (props) => {

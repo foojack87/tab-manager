@@ -19,11 +19,11 @@ const tabDetailsSlice = createSlice({
         paymethod: newTab.paymethod,
       });
     },
-  },
-  deleteTab(state, action) {
-    const id = action.payload;
-    state.changed = true;
-    state.tab = state.tab.filter((tabs) => tabs.id !== id);
+    deleteTab(state, action) {
+      const id = action.payload;
+      state.tab = state.tab.filter((tabs) => tabs.id !== id);
+      state.changed = true;
+    },
   },
 });
 

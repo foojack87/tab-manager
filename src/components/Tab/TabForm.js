@@ -48,7 +48,7 @@ const TabForm = (props) => {
     // submit form data to firebase
     dispatch(
       tabActions.createNewTab({
-        id: props.id,
+        id: Math.random(),
         user: enteredUsername,
         payer: enteredPayer,
         amount: enteredAmount,
