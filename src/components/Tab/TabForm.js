@@ -87,8 +87,8 @@ const TabForm = (props) => {
             </div>
           </div>
           <div className={classes.actions}>
-            <button onClick={closeFormHandler}>Close</button>
             <button>Submit</button>
+            <button onClick={closeFormHandler}>Close</button>
           </div>
         </form>
       </Modal>
