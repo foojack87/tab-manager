@@ -1,6 +1,8 @@
 import Tab from "./Tab";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
 import classes from "./TabList.module.css";
+import { fetchTabData } from "../store/tab-actions";
 
 // const DUMMY_TABS = [
 //   {
@@ -43,6 +45,7 @@ import classes from "./TabList.module.css";
 
 const TabList = (props) => {
   const tabItems = useSelector((state) => state.tabDetails.tab);
+
   return (
     <ul className={classes.tablist}>
       {tabItems.map((tab) => (

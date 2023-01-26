@@ -1,6 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialTabFormState = { isTabFormShown: false, isFormValid: false };
+const initialTabFormState = {
+  isTabFormShown: false,
+  isFormValid: false,
+  notification: null,
+};
 
 const tabSlice = createSlice({
   name: "toggleTabForm",
@@ -20,6 +24,13 @@ const tabSlice = createSlice({
     },
     invalidForm(state) {
       state.isFormValid = false;
+    },
+    showNotification(state, action) {
+      state.notification = {
+        status: action.payload.status,
+        title: action.payload.title,
+        message: action.payload.message,
+      };
     },
   },
 });
