@@ -6,6 +6,12 @@ const User = (props) => {
       <Card>
         <h1>Jackie</h1>
       </Card>
+      <Card>
+        <h1>Silvia</h1>
+      </Card>
+      <Card>
+        <h1>Alex</h1>
+      </Card>
     </li>
   );
 };

@@ -1,6 +1,6 @@
 .tabdetails {
   display: grid;
-  grid-template-columns: 0.5fr 0.5fr 2fr 0.5fr 1.5fr;
+  grid-template-columns: 0.5fr 0.5fr 1.5fr 0.75fr 1fr;
   list-style: none;
   padding-left: 0;
   margin-bottom: 1rem;
@@ -9,7 +9,9 @@
 .tabdetails li {
   border: 1px solid #1a8ed1;
   padding: 0.6rem;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tabactions {

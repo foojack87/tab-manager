@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { tabActions } from "../store/tabDetails";
 
 const Tab = (props) => {
-  const { id, user, payer, amount, description, date, paymethod } = props;
+  const { id, user, payer, amount, description, date, paymethod } = props.tab;
   const dispatch = useDispatch();
 
   const removeTabHandler = () => {

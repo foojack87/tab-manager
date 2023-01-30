@@ -13,7 +13,7 @@ let initial = true;
 function App() {
   const dispatch = useDispatch();
   const showTabForm = useSelector((state) => state.tab.isTabFormShown);
-  const tabs = useSelector((state) => state.tabDetails);
+  const tabs = useSelector((state) => state.tabDetails.tab);
   // const notifications = useSelector((state) => state.tab.notifications);
 
   useEffect(() => {
@@ -25,10 +25,7 @@ function App() {
       initial = false;
       return;
     }
-
-    if (tabs.changed) {
-      dispatch(sendTabData(tabs.tab));
-    }
+    dispatch(sendTabData(tabs));
   }, [dispatch, tabs]);
 
   return (
@@ -37,7 +34,7 @@ function App() {
       <Layout>
         <MainContainer>
           <UsersContainer />
-          {tabs.tab.length > 0 && <TabContainer />}
+          {tabs.length > 0 && <TabContainer />}
         </MainContainer>
       </Layout>
     </Fragment>

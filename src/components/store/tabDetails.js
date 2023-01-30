@@ -25,7 +25,7 @@ const tabDetailsSlice = createSlice({
       state.changed = true;
     },
     replaceTab(state, action) {
-      state.items = action.payload.items || [];
+      state.tab = action.payload || [];
     },
   },
 });

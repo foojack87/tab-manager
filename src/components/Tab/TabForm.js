@@ -14,6 +14,7 @@ const TabForm = (props) => {
   const amountInputRef = useRef();
   const descriptionInputRef = useRef();
   const paymethodInputRef = useRef();
+  const dateInputRef = useRef();
 
   const closeFormHandler = (props) => {
     dispatch(myTabFormActions.hideTabForm());
@@ -27,18 +28,21 @@ const TabForm = (props) => {
     const enteredAmount = amountInputRef.current.value;
     const enteredDescription = descriptionInputRef.current.value;
     const enteredPaymethod = paymethodInputRef.current.value;
+    const enteredDate = dateInputRef.current.value;
 
     const validUsername = !isEmpty(enteredUsername);
     const validPayer = !isEmpty(enteredPayer);
     const validAmount = !isEmpty(enteredAmount);
     const validDescription = !isEmpty(enteredDescription);
     const validPaymethod = !isEmpty(enteredPaymethod);
+    const validDate = !isEmpty(enteredDate);
 
     const formIsValid =
       validUsername &&
       validPayer &&
       validAmount &&
       validDescription &&
+      validDate &&
       validPaymethod;
 
     if (!formIsValid) {
@@ -54,6 +58,7 @@ const TabForm = (props) => {
         amount: enteredAmount,
         description: enteredDescription,
         paymethod: enteredPaymethod,
+        date: enteredDate,
       })
     );
 
@@ -63,7 +68,9 @@ const TabForm = (props) => {
   return (
     <section>
       <Modal onHideTabForm={props.onHideTabForm}>
-        <h2>Create Your Tab</h2>
+        <div className={classes.header}>
+          <h2>Create Your Tab</h2>
+        </div>
         <form onSubmit={submitHandler} className={classes.input}>
           <div className={classes.formInput}>
             <div className={classes.basics}>
@@ -73,13 +80,15 @@ const TabForm = (props) => {
               <input type="text" id="their-name" ref={payerInputRef} />
               <label htmlFor="amount">Amount Owed</label>
               <input type="number" id="amount" ref={amountInputRef} />
+              <label htmlFor="date">Date</label>
+              <input type="date" id="date" ref={dateInputRef} />
             </div>
             <div className={classes.details}>
               <label htmlFor="description">What's the payment for</label>
               <textarea
                 id="description"
                 ref={descriptionInputRef}
-                rows="3"
+                rows="5"
                 cols="24"
               />
               {/* <input type="text" id="description" ref={descriptionInputRef} /> */}
@@ -88,7 +97,7 @@ const TabForm = (props) => {
                 id="how-to-pay"
                 ref={paymethodInputRef}
                 placeholder="Cash or wire transfer? Please leave your bank information if you prefer wire transfer"
-                rows="3"
+                rows="5"
                 cols="24"
               />
             </div>

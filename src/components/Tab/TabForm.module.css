@@ -1,13 +1,13 @@
-/* .input {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-  margin-bottom: 0.5rem;
-} */
-
 h2 {
-  text-align: center;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  background-color: #5c7cfa;
+  place-content: center;
+  margin-bottom: 0.6rem;
+  border-radius: 14px 14px 0px 0px;
 }
 
 textarea {
@@ -59,7 +59,7 @@ textarea {
 }
 
 .basics input {
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem;
   height: 2.8rem;
 }
 
@@ -67,12 +67,12 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+  padding: 0.6rem;
 }
 
 .details input {
   display: flex;
   flex-direction: column;
-  height: 8rem;
 }
 
 /* 

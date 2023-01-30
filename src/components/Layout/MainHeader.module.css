@@ -5,11 +5,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #5c7cfa;
+  background-color: #f1f3f5;
+  background-image: linear-gradient(to bottom right, #bac8ff, #f1f3f5);
 }
 
 .header h1 {
-  color: #fff;
+  color: #5c7cfa;
   display: flex;
   align-items: center;
   gap: 2rem;

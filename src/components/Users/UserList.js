@@ -5,10 +5,6 @@ const UsersList = (props) => {
     <section>
       <ul className={classes.userslist}>
         <User />
-        <User />
-        <User />
-        <User />
-        <User />
       </ul>
     </section>
   );
