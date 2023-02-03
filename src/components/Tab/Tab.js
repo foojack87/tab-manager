@@ -11,6 +11,8 @@ const Tab = (props) => {
     dispatch(tabActions.deleteTab(id));
   };
 
+  console.log(amount);
+
   return (
     <li>
       <TabCard>
@@ -18,7 +20,7 @@ const Tab = (props) => {
           <li>
             {user} Owes {payer}
           </li>
-          <li>{amount}$</li>
+          <li>NTD${amount}</li>
           <li>{description}</li>
           <li>{date}</li>
           <li>{paymethod}</li>

@@ -8,3 +8,8 @@
   font-size: 1.2rem;
   text-align: center;
 }
+
+.user button {
+  width: 9rem;
+  font-weight: 500;
+}

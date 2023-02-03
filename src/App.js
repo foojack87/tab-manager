@@ -5,6 +5,7 @@ import MainContainer from "./components/Layout/MainContainer";
 import { fetchTabData, sendTabData } from "./components/store/tab-actions";
 import TabContainer from "./components/Tab/TabContainer";
 import TabForm from "./components/Tab/TabForm";
+import UserDetails from "./components/Users/UserDetails";
 import UsersContainer from "./components/Users/UsersContainer";
 
 let initial = true;
@@ -30,6 +31,7 @@ function App() {
   return (
     <Fragment>
       {showTabForm && <TabForm />}
+      <UserDetails />
       <Layout>
         <MainContainer>
           <UsersContainer />
