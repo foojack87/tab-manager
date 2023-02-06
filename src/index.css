@@ -13,6 +13,11 @@ body {
   background-image: linear-gradient(to bottom right, #5c7cfa, #f1f3f5);
 }
 
+h1 {
+  color: #343a40;
+  font-size: 1.4rem;
+}
+
 button {
   font: inherit;
   cursor: pointer;

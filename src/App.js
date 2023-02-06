@@ -5,8 +5,8 @@ import MainContainer from "./components/Layout/MainContainer";
 import { fetchTabData, sendTabData } from "./components/store/tab-actions";
 import TabContainer from "./components/Tab/TabContainer";
 import TabForm from "./components/Tab/TabForm";
-import UserDetails from "./components/Users/UserDetails";
 import UsersContainer from "./components/Users/UsersContainer";
+import UserDetails from "./components/Users/UserDetails";
 
 let initial = true;
 
@@ -14,6 +14,8 @@ function App() {
   const dispatch = useDispatch();
   const showTabForm = useSelector((state) => state.tab.isTabFormShown);
   const tabs = useSelector((state) => state.tabDetails.tab);
+  const showUserData = useSelector((state) => state.users.isUserDataShown);
+
   // const notifications = useSelector((state) => state.tab.notifications);
 
   useEffect(() => {
@@ -31,7 +33,7 @@ function App() {
   return (
     <Fragment>
       {showTabForm && <TabForm />}
-      <UserDetails />
+      {showUserData && <UserDetails />}
       <Layout>
         <MainContainer>
           <UsersContainer />

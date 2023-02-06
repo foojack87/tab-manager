@@ -11,8 +11,6 @@ const Tab = (props) => {
     dispatch(tabActions.deleteTab(id));
   };
 
-  console.log(amount);
-
   return (
     <li>
       <TabCard>

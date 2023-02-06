@@ -4,11 +4,13 @@ const User = (props) => {
   const { name } = props.users;
 
   return (
-    <li className={classes.user}>
-      <h1>
-        <button>{name}</button>
-      </h1>
-    </li>
+    <>
+      <li className={classes.user}>
+        <h1>
+          <button onClick={props.onClick}>{name}</button>
+        </h1>
+      </li>
+    </>
   );
 };
 

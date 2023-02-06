@@ -1,0 +1,46 @@
+.positive {
+  color: #94d82d;
+  margin-left: 0.8rem;
+}
+
+.negative {
+  color: #ff6b6b;
+  margin-left: 0.8rem;
+}
+
+.totals {
+  font-weight: 600;
+  font-size: 1.8rem;
+  display: flex;
+  place-content: center;
+  width: auto;
+  padding: 0.4rem;
+  /* border-bottom: 0.8px solid rgba(128, 128, 128, 0.5); */
+  /* box-shadow: 0 0.8rem 1.6rem rgb(0 0 0 / 12%); */
+}
+
+.username {
+  display: flex;
+  background-color: #5c7cfa;
+  place-content: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 0.4rem;
+  color: #fff;
+}
+
+.usercontainer {
+  padding: 2.4rem;
+}
+
+.amounts {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.8rem;
+  border-bottom: 0.8px solid rgba(128, 128, 128, 0.5);
+}
+
+.action {
+  display: flex;
+  margin: 0 auto;
+}
