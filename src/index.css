@@ -35,3 +35,15 @@ button:active {
   border-color: #1ac5d1;
   color: #fff;
 }
+
+@media (max-width: 1280px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 920px) {
+  html {
+    font-size: 50%;
+  }
+}

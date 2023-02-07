@@ -1,6 +1,6 @@
 import Modal from "../UI/Modal";
 import { useDispatch } from "react-redux";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { myTabFormActions } from "../store/tab";
 import { tabActions } from "../store/tabDetails";
 import classes from "./TabForm.module.css";
@@ -19,6 +19,16 @@ const TabForm = (props) => {
   const closeFormHandler = (props) => {
     dispatch(myTabFormActions.hideTabForm());
   };
+
+  useEffect(() => {
+    const close = (e) => {
+      if (e.key === "Escape") {
+        dispatch(myTabFormActions.hideTabForm());
+      }
+    };
+    window.addEventListener("keydown", close);
+    return () => window.removeEventListener("keydown", close);
+  }, [dispatch]);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -74,9 +84,9 @@ const TabForm = (props) => {
         <form onSubmit={submitHandler} className={classes.input}>
           <div className={classes.formInput}>
             <div className={classes.basics}>
-              <label htmlFor="your-name">Your Name</label>
+              <label htmlFor="your-name">Debtor</label>
               <input type="text" id="your-name" ref={usernameInputRef} />
-              <label htmlFor="their-name">Their Name</label>
+              <label htmlFor="their-name">Creditor</label>
               <input type="text" id="their-name" ref={payerInputRef} />
               <label htmlFor="amount">Amount Owed</label>
               <input type="number" id="amount" ref={amountInputRef} />
@@ -89,7 +99,7 @@ const TabForm = (props) => {
                 id="description"
                 ref={descriptionInputRef}
                 rows="5"
-                cols="24"
+                // cols="24"
               />
               {/* <input type="text" id="description" ref={descriptionInputRef} /> */}
               <label htmlFor="how-to-pay">Payment Method</label>
@@ -98,7 +108,7 @@ const TabForm = (props) => {
                 ref={paymethodInputRef}
                 placeholder="Cash or wire transfer? Please leave your bank information if you prefer wire transfer"
                 rows="5"
-                cols="24"
+                // cols="24"
               />
             </div>
           </div>

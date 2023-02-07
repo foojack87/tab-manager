@@ -75,6 +75,14 @@ textarea {
   flex-direction: column;
 }
 
+.details {
+  padding-right: 1.4rem;
+}
+
+.basics {
+  padding: 0rem 1.4rem;
+}
+
 /* 
 .actions {
   display: flex;

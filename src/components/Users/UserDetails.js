@@ -2,11 +2,11 @@ import Modal from "../UI/Modal";
 import classes from "./UserDetails.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { userDataActions } from "../store/user";
+import { useEffect } from "react";
 
 const UserDetails = (props) => {
   const tabs = useSelector((state) => state.tabDetails.tab);
   const users = useSelector((state) => state.userDetails.userData);
-  console.log(users);
   const dispatch = useDispatch();
 
   const usersOwedTabs = tabs.filter((tabs) => tabs.user === users);
@@ -22,7 +22,6 @@ const UserDetails = (props) => {
 
   const loanedArray = getLoanAmount(usersOwedTabs);
   const borrowedArray = getBorrowedAmount(usersPaidTabs);
-  // const totalAmountArray = loanedArray.concat(borrowedArray);
   const totalLoaned = loanedArray.reduce((acc, curr) => acc + curr, 0);
   const totalBorrowed = borrowedArray.reduce((acc, curr) => acc + curr, 0);
   const netAmount = totalBorrowed - totalLoaned;
@@ -36,6 +35,16 @@ const UserDetails = (props) => {
   const closeUserDataHandler = () => {
     dispatch(userDataActions.hideUserData());
   };
+
+  useEffect(() => {
+    const close = (e) => {
+      if (e.key === "Escape") {
+        dispatch(userDataActions.hideUserData());
+      }
+    };
+    window.addEventListener("keydown", close);
+    return () => window.removeEventListener("keydown", close);
+  }, [dispatch]);
 
   return (
     <Modal>
@@ -51,13 +60,13 @@ const UserDetails = (props) => {
       <main className={classes.usercontainer}>
         <div className={classes.amounts}>
           <h1>
-            Borrowed:
+            Loaned:
             <span className={classes.positive}>
               {toCurrency(totalBorrowed)}
             </span>
           </h1>
           <h1>
-            Loaned:
+            Borrowed:
             <span className={classes.negative}>{toCurrency(totalLoaned)}</span>
           </h1>
         </div>

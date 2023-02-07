@@ -19,7 +19,6 @@ export const fetchTabData = () => {
     try {
       const tabData = await fetchData();
       dispatch(tabActions.replaceTab(tabData));
-      console.log(tabData);
     } catch (error) {
       dispatch(
         myTabFormActions.showNotification({
@@ -49,7 +48,6 @@ export const sendTabData = (tab) => {
       if (!res.ok) {
         throw new Error("Failed to send tab data.");
       }
-      console.log(tab);
     };
 
     try {

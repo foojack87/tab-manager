@@ -4,3 +4,15 @@
   display: flex;
   gap: 4rem;
 }
+
+@media (max-width: 650px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 485px) {
+  .mainContainer {
+    padding: 1.4rem 2.4rem;
+  }
+}
