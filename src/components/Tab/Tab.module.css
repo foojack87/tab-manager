@@ -25,5 +25,9 @@
 @media (max-width: 485px) {
   .tabdetails {
     overflow: hidden;
+    grid-template-columns: 0.5fr 0.5fr 1fr 1fr 1fr;
+  }
+  .tabdetails li {
+    padding: 0.5rem;
   }
 }
