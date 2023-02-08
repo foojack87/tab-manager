@@ -2,15 +2,15 @@
 
 # How its done
 
-Made with CRA ReactJS.
-styled with css modules.
-Firebase for backend database.
+Made with CRA ReactJS.  
+styled with css modules.  
+Firebase for backend database.  
 Used Redux for state management.
 
 # Features to be added
 
-Account authentication.
-More detailed profile view.
-Filtering/Sorting Tabs list.
-Improve user feedback for form validation.
+Account authentication.  
+More detailed profile view.  
+Filtering/Sorting Tabs list.  
+Improve user feedback for form validation.  
 Spice up styling.
