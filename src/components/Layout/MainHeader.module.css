@@ -9,11 +9,14 @@
   background-image: linear-gradient(to bottom right, #bac8ff, #f1f3f5);
 }
 
+.logo {
+  height: 5.2rem;
+}
+
 .header h1 {
   color: #5c7cfa;
   display: flex;
   align-items: center;
-  gap: 2rem;
   font-size: 2.4rem;
 }
 

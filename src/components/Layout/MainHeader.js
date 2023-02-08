@@ -6,7 +6,11 @@ const MainHeader = (props) => {
     <section className={classes.nav}>
       <header className={classes.header}>
         <h1>
-          TABIFY
+          <img
+            className={classes.logo}
+            src={require("../../images/tabify-logo2.png")}
+            alt="logo for tabify"
+          />
           <span className={classes.subtitle}>
             &mdash; Find your tabs here 💲💲💲
           </span>
