@@ -37,7 +37,7 @@ textarea {
 .formInput {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.8rem;
   place-items: center;
 }
 
@@ -47,10 +47,16 @@ textarea {
 }
 
 .actions {
+  /* width: 18rem; */
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 0.6rem;
   padding: 0.6rem;
+  place-content: center;
+}
+
+.actions button {
+  width: 12rem;
 }
 
 .details input {

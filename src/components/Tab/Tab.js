@@ -1,14 +1,18 @@
-import classes from "./Tab.module.css";
-import TabCard from "./TabCard";
-import { useDispatch } from "react-redux";
-import { tabActions } from "../store/tabDetails";
+import classes from './Tab.module.css';
+import TabCard from './TabCard';
+import { useDispatch } from 'react-redux';
+import { tabActions } from '../store/tabDetails';
 
 const Tab = (props) => {
   const { id, user, payer, amount, description, date, paymethod } = props.tab;
   const dispatch = useDispatch();
 
   const removeTabHandler = () => {
-    dispatch(tabActions.deleteTab(id));
+    const proceed = window.confirm('Are you sure? This will delete the tab.');
+
+    if (proceed) {
+      dispatch(tabActions.deleteTab(id));
+    }
   };
 
   return (
