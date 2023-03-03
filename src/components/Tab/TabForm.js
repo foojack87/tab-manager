@@ -1,11 +1,11 @@
-import Modal from "../UI/Modal";
-import { useDispatch } from "react-redux";
-import { useRef, useEffect } from "react";
-import { myTabFormActions } from "../store/tab";
-import { tabActions } from "../store/tabDetails";
-import classes from "./TabForm.module.css";
+import Modal from '../UI/Modal';
+import { useDispatch } from 'react-redux';
+import { useRef, useEffect } from 'react';
+import { myTabFormActions } from '../store/tab';
+import { tabActions } from '../store/tabDetails';
+import classes from './TabForm.module.css';
 
-const isEmpty = (value) => value.trim() === "";
+const isEmpty = (value) => value.trim() === '';
 
 const TabForm = (props) => {
   const dispatch = useDispatch();
@@ -22,12 +22,12 @@ const TabForm = (props) => {
 
   useEffect(() => {
     const close = (e) => {
-      if (e.key === "Escape") {
+      if (e.key === 'Escape') {
         dispatch(myTabFormActions.hideTabForm());
       }
     };
-    window.addEventListener("keydown", close);
-    return () => window.removeEventListener("keydown", close);
+    window.addEventListener('keydown', close);
+    return () => window.removeEventListener('keydown', close);
   }, [dispatch]);
 
   const submitHandler = (e) => {
@@ -81,7 +81,11 @@ const TabForm = (props) => {
         <div className={classes.header}>
           <h2>Create Your Tab</h2>
         </div>
-        <form onSubmit={submitHandler} className={classes.input}>
+        <form
+          onSubmit={submitHandler}
+          className={classes.input}
+          autoComplete="off"
+        >
           <div className={classes.formInput}>
             <div className={classes.basics}>
               <label htmlFor="your-name">Debtor</label>
